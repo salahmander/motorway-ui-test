@@ -2,6 +2,9 @@ import React, { useState } from "react";
 
 import "./Form.css";
 
+// utility function
+import { dateFormatter } from "../../utils/dateFormatter";
+
 const Form = () => {
   // form states
   const [firstName, setFirstName] = useState("");
@@ -108,6 +111,8 @@ const Form = () => {
                 autoComplete="bday"
                 className="dob-input"
                 id="dob"
+                max={dateFormatter()}
+                min="1800-01-01"
                 name="dob"
                 onChange={(e) => handleDateOfBirthChange(e)}
                 required
