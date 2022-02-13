@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import "./Form.css";
 
 // utility function
+import { currencyFormatter } from "../..//utils/currencyFormatter";
 import { dateFormatter } from "../../utils/dateFormatter";
 
 const Form = () => {
@@ -154,7 +155,9 @@ const Form = () => {
                 value={salary}
               />
               <div className="salary-range-wrapper">
-                <span className="salary-range">Salary</span>
+                <span className="salary-range">
+                  {currencyFormatter.format(salary)}
+                </span>
               </div>
             </label>
           </div>
