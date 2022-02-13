@@ -5,6 +5,7 @@ import "./Form.css";
 // utility function
 import { currencyFormatter } from "../..//utils/currencyFormatter";
 import { dateFormatter } from "../../utils/dateFormatter";
+import { salaryEmojiSelector } from "../..//utils/salaryEmojiSelector";
 
 const Form = () => {
   // form states
@@ -20,18 +21,26 @@ const Form = () => {
   const handleFirstNameChange = (event) => {
     setFirstName(event.target.value);
   };
+
   const handleSurnameChange = (event) => {
     setSurname(event.target.value);
   };
+
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
   };
+
   const handleSalaryChange = (event) => {
+    const emoji = salaryEmojiSelector(event.target.value);
+
+    setSalaryEmoji(emoji);
     setSalary(event.target.value);
   };
+
   const handleDateOfBirthChange = (event) => {
     setDateOfBirth(event.target.value);
   };
+
   const handleFavouriteColourChange = (event) => {
     setFavouriteColour(event.target.value);
   };
@@ -156,7 +165,7 @@ const Form = () => {
               />
               <div className="salary-range-wrapper">
                 <span className="salary-range">
-                  {currencyFormatter.format(salary)}
+                  {currencyFormatter.format(salary)} {salaryEmoji}
                 </span>
               </div>
             </label>
