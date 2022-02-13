@@ -3,9 +3,11 @@ import React, { useState, useEffect } from "react";
 // Styling
 import "./MainPage.css";
 
+// Components
+import Form from "../../components/Form/Form";
+
 // Utility functions
 import { randomImageSelector } from "../../utils/randomImageSelector";
-
 
 const HomePage = ({ images }) => {
   const [randomImage, setRandomImage] = useState({});
@@ -30,7 +32,7 @@ const HomePage = ({ images }) => {
         </div>
         <div className="main-top-right-form-container">
           <div className="form-container">
-            <h1>Form Component</h1>
+            <Form />
           </div>
         </div>
       </section>
