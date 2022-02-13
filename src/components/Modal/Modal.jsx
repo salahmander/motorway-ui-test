@@ -16,30 +16,24 @@ const Modal = ({ setIsOpen, isOpen }) => {
   return (
     <>
       <div className="modal-dark-background" onClick={() => setIsOpen(false)} />
-      <div className="modal-container">
-        <div className="modal-inner-wrapper">
-          <header className="modal-header">
-            <h1 className="-modal-heading">Heading</h1>
-          </header>
-          <button
-            className="modal-cross-button"
-            onClick={() => setIsOpen(false)}
-          >
+      <div className="modal-container ">
+        <div className="modal-inner-container">
+          <div className="modal-header">
+            <h1 className="modal-heading">Heading</h1>
+          </div>
+          <button className="modal-cross-btn" onClick={() => setIsOpen(false)}>
             X
           </button>
           <div className="modal-content">
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Unde
-            facilis totam adipisci autem quasi exercitationem recusandae amet
-            obcaecati, assumenda inventore eius labore molestiae ipsam
-            voluptatum nisi soluta similique minus sapiente blanditiis! Cum,
-            quas vero iste quidem dolor odit quisquam consequuntur,
-            reprehenderit nulla provident magni! Illo voluptatibus asperiores ea
-            impedit eum.
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
+            similique quod animi velit unde quo possimus? Atque, reprehenderit,
+            aperiam corrupti enim provident ipsam quod animi eveniet itaque
+            voluptates iure aliquid?
           </div>
-          <div className="modal-action-container">
-            <div className="modal-inner-wrapper">
+          <div className="modal-actions-container">
+            <div className="modal-actions">
               <button
-                className="modal-close-button"
+                className="modal-close-btn"
                 onClick={() => setIsOpen(false)}
               >
                 Close
