@@ -1,0 +1,101 @@
+.inner-form-wrapper {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .title {
+    font-family: "Ginto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-weight: 600;
+    font-size: x-large;
+    color: #fff;
+  }
+  
+  .input-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+  }
+  
+  .name-input-wrapper {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .label-heading {
+    text-transform: uppercase;
+    color: #b9bbbe;
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 16px;
+    margin-bottom: 8px;
+    font-family: "Ginto", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  
+  .text-input {
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 100%;
+    border-radius: 3px;
+    color: #dcddde;
+    background-color: #2f3136;
+    border: 1px solid #18191c;
+  }
+  
+  .dob-input {
+    padding: 10px;
+    height: 40px;
+    font-size: 16px;
+    box-sizing: border-box;
+    width: 50%;
+    border-radius: 3px;
+    color: #dcddde;
+    background-color: #2f3136;
+    border: 1px solid #18191c;
+  }
+  
+  .colour-input {
+    padding: 10px;
+    height: 50px;
+    font-size: 16px;
+    width: 50%;
+    border-radius: 3px;
+    color: #dcddde;
+    background-color: #2f3136;
+    border: 1px solid #18191c;
+  }
+  
+  .salary-input {
+    width: 100%;
+  }
+  
+  .salary-input::-webkit-slider-thumb {
+    cursor: pointer;
+  }
+  
+  .salary-range-wrapper {
+    text-align: center;
+    color: #dcddde;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+  }
+  
+  .form-submit-button {
+    background-color: aquamarine;
+    border-color: aquamarine;
+    color: #2f3136;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 24px;
+    width: 95%;
+    min-height: 44px;
+    margin: 0px 10px;
+    cursor: pointer;
+  }
+  
+  .form-submit-button:hover {
+    background-color: #4ddbab;
+  }
