@@ -1,0 +1,25 @@
+.gallery-card-wrapper {
+  width: 400px;
+  height: 300px;
+  margin: 10px;
+  transition: transform 300ms ease 100ms;
+}
+
+.temp-image-name {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.inner-gallery-wrapper:hover .gallery-card-wrapper {
+  transform: translateX(-12%);
+}
+
+.gallery-card-wrapper:hover ~ .gallery-card-wrapper {
+  transform: translateX(12%);
+}
+
+.gallery-card-wrapper:hover {
+  transform: scale(1.2);
+  cursor: pointer;
+}
