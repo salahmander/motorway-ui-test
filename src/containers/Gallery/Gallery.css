@@ -1,11 +1,22 @@
 .gallery-container {
   display: flex;
   justify-content: center;
+  width: 100vw;
 }
 
-.inner-gallery-wrapper {
+.inner-gallery-container {
   display: flex;
   flex-wrap: wrap;
   margin: 20px;
-  width: 1680px;
+  padding: 0 80px;
+}
+
+@media only screen and (max-width: 880px) {
+  .inner-gallery-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
 }

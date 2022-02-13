@@ -4,7 +4,7 @@
 
 .main-top-left-image-container {
   background-color: black;
-  min-width: 50%;
+  width: 50%;
   height: 100vh;
 }
 
@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   background-color: #282c34;
-  min-width: 50%;
+  width: 50%;
   height: 100vh;
 }
 
@@ -29,4 +29,14 @@
   width: 480px;
   padding: 32px;
   border-radius: 5px;
+}
+
+@media only screen and (max-width: 1100px) {
+  .main-top-left-image-container {
+    display: none;
+  }
+
+  .main-top-right-form-container {
+    width: 100%;
+  }
 }

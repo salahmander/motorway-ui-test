@@ -5,10 +5,17 @@
   transition: transform 300ms ease 100ms;
 }
 
-.temp-image-name {
+.gallery-card-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 300ms ease 100ms;
+}
+
+.gallery-card-wrapper img:hover {
+  transform: scale(1.08);
+  transition: transform 300ms ease 100ms;
+  cursor: pointer;
 }
 
 .inner-gallery-wrapper:hover .gallery-card-wrapper {
@@ -19,7 +26,8 @@
   transform: translateX(12%);
 }
 
-.gallery-card-wrapper:hover {
-  transform: scale(1.2);
+.gallery-card-wrapper img:hover {
+  transform: scale(1.08);
+  transition: transform 300ms ease 100ms;
   cursor: pointer;
 }

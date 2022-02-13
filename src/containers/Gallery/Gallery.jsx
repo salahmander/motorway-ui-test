@@ -15,7 +15,7 @@ const Gallery = ({ images }) => {
   };
   return (
     <div className="gallery-container">
-      <div className="inner-gallery-wrapper">
+      <div className="inner-gallery-container">
         {images &&
           images.map((image) => (
             <GalleryCard
