@@ -3,6 +3,9 @@ import React, { useState, useEffect } from "react";
 // Styling
 import "./MainPage.css";
 
+// Containers
+import Gallery from "../../containers/Gallery/Gallery";
+
 // Components
 import Form from "../../components/Form/Form";
 
@@ -37,7 +40,7 @@ const HomePage = ({ images }) => {
         </div>
       </section>
       <section className="main-bottom-container">
-        <h1>Gallery Component</h1>
+        <Gallery images={images}/>
       </section>
     </main>
   );
