@@ -1,14 +1,32 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 // Styling
 import "./MainPage.css";
 
+// Utility functions
+import { randomImageSelector } from "../../utils/randomImageSelector";
+
+
 const HomePage = ({ images }) => {
+  const [randomImage, setRandomImage] = useState({});
+
+  useEffect(() => {
+    if (images) {
+      const selectedRandomImage = randomImageSelector(images);
+      setRandomImage(selectedRandomImage);
+    }
+  }, [images]);
+
   return (
     <main className="main-page-container">
       <section className="main-top-container">
         <div className="main-top-left-image-container">
-          <h1>Random Image</h1>
+          {
+            <img
+              src={`${randomImage?.imageUrl}.jpg`}
+              alt={randomImage?.imageAlt}
+            />
+          }
         </div>
         <div className="main-top-right-form-container">
           <div className="form-container">
