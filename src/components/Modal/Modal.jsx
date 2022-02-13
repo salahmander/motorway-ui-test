@@ -38,9 +38,6 @@ const Modal = ({ setIsOpen, isOpen, imageData }) => {
               />
             </div>
           </header>
-          <button className="modal-cross-btn" onClick={() => setIsOpen(false)}>
-            X
-          </button>
           <div className="modal-content">
             <div className="modal-content-top">
               <h1>{imageData?.user?.username}</h1>

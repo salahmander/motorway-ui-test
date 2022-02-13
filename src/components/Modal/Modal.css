@@ -130,26 +130,6 @@
   align-items: center;
 }
 
-.modal-cross-btn {
-  position: absolute;
-  right: 0;
-  top: 0;
-  padding: 4px 8px;
-  border-radius: 8px;
-  font-size: 18px;
-  color: aquamarine;
-  border: 1px solid aquamarine;
-  background-color: #2f3136;
-  transition: all 0.25s ease;
-}
-
-.modal-cross-btn:hover {
-  color: #2f3136;
-  border: 1px solid #2f3136;
-  background-color: aquamarine;
-  cursor: pointer;
-}
-
 .modal-close-btn {
   margin-top: 10px;
   padding: 11px 28px;
