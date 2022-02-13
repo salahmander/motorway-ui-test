@@ -9,11 +9,7 @@ const GalleryCard = ({ image, openModalHandler }) => {
         className="gallery-card-wrapper"
         onClick={() => openModalHandler(image)}
       >
-        <img
-          className="temp-image-name"
-          src={`${image?.url}.jpg`}
-          alt={image?.alt_description}
-        />
+        <img src={`${image?.url}.jpg`} alt={image?.alt_description} />
       </div>
     </>
   );

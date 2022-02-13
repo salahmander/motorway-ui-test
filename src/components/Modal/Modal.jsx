@@ -3,7 +3,6 @@ import React, { useEffect } from "react";
 import "./Modal.css";
 
 const Modal = ({ setIsOpen, isOpen, imageData }) => {
-  console.log(imageData);
   // Prevent scrolling when modal is active.
   useEffect(() => {
     if (isOpen) {
