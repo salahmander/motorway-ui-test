@@ -45,9 +45,20 @@ const Form = () => {
     setFavouriteColour(event.target.value);
   };
 
+  // handle submit
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    console.log(firstName);
+    console.log(surname);
+    console.log(email);
+    console.log(dateOfBirth);
+    console.log(favouriteColour);
+    console.log(salary);
+  };
+
   return (
     <>
-      <form>
+      <form onSubmit={handleSubmit}>
         <div className="inner-form-wrapper">
           <h1 className="title">👩‍💻 🧑‍💻 👨‍💻</h1>
         </div>
