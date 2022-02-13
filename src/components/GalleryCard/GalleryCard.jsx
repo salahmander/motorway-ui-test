@@ -2,10 +2,13 @@ import React from "react";
 
 import "./GalleryCard.css";
 
-const GalleryCard = ({ image }) => {
+const GalleryCard = ({ image, openModalHandler }) => {
   return (
     <>
-      <div className="gallery-card-wrapper">
+      <div
+        className="gallery-card-wrapper"
+        onClick={() => openModalHandler(image)}
+      >
         <img
           className="temp-image-name"
           src={`${image?.url}.jpg`}
