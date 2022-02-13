@@ -1,6 +1,6 @@
 .modal-dark-background {
   background-color: rgba(0, 0, 0, 0.6);
-  width: 100%;
+  width: 100vw;
   height: 10000px;
   z-index: 0;
   top: 50%;
@@ -15,38 +15,107 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  color: #dcddde;
+  font-family: "Ginto", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 .modal-inner-container {
-  width: 70vw;
-  height: 80vh;
+  width: 450px;
+  min-height: 640px;
   background: #36393f;
   z-index: 10;
   border-radius: 16px;
 }
 
 .modal-header {
-  height: 50px;
+  position: relative;
+  height: 250px;
   background: #36393f;
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
+  border-bottom: 3px solid aquamarine;
 }
 
-.modal-heading {
-  margin: 0;
-  padding: 10px;
-  color: #fff;
-  font-weight: 500;
-  font-size: 18px;
-  text-align: center;
+.modal-header-image-wrapper {
+  opacity: 0.6;
+  height: 100%;
+  width: 100%;
+  border-bottom: 3px solid aquamarine;
+}
+
+.modal-header-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.modal-profile-image-wrapper {
+  position: absolute;
+  top: 190px;
+  left: 15px;
+  height: 110px;
+  width: 110px;
+  border-radius: 50%;
+  border: 3px solid aquamarine;
+}
+
+.modal-profile-image {
+  border-radius: 50%;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .modal-content {
-  padding: 10px;
-  font-size: 14px;
+  height: 50%;
+  margin-top: 10px;
   color: #fff;
   text-align: center;
 }
+
+.modal-content-top{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 90px;
+}
+
+.modal-content-top h2, h3 {
+  color: #b9bbbe;;
+}
+
+.modal-content-middle{
+  height: 100px;
+  text-align:start;
+}
+
+.modal-content-middle p{
+  padding-left: 20px;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.modal-content-bottom{
+  display: flex;
+  justify-content: center;
+  min-height: 80px;
+  border-top: 3px solid aquamarine;
+  border-bottom: 3px solid aquamarine;
+  padding-top: 10px
+}
+
+.total{
+  display: flex;
+  flex-direction: column;
+  width: 100%;;
+}
+
+.total h1{
+  font-size: large;
+}
+
 
 .modal-actions-container {
   position: absolute;

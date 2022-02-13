@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 
 import "./Modal.css";
 
-const Modal = ({ setIsOpen, isOpen }) => {
+const Modal = ({ setIsOpen, isOpen, imageData }) => {
+  console.log(imageData);
   // Prevent scrolling when modal is active.
   useEffect(() => {
     if (isOpen) {
@@ -18,17 +19,51 @@ const Modal = ({ setIsOpen, isOpen }) => {
       <div className="modal-dark-background" onClick={() => setIsOpen(false)} />
       <div className="modal-container ">
         <div className="modal-inner-container">
-          <div className="modal-header">
-            <h1 className="modal-heading">Heading</h1>
-          </div>
+          <header
+            className="modal-header"
+            style={{ backgroundColor: `${imageData?.color}` }}
+          >
+            <div className="modal-header-image-wrapper">
+              <img
+                className="modal-header-image"
+                src={`${imageData?.url}.jpg`}
+                alt={imageData?.alt_description}
+              />
+            </div>
+            <div className="modal-profile-image-wrapper">
+              <img
+                className="modal-profile-image"
+                src={`${imageData?.user?.profile_image}.jpg`}
+                alt="profile image"
+              />
+            </div>
+          </header>
           <button className="modal-cross-btn" onClick={() => setIsOpen(false)}>
             X
           </button>
           <div className="modal-content">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Neque
-            similique quod animi velit unde quo possimus? Atque, reprehenderit,
-            aperiam corrupti enim provident ipsam quod animi eveniet itaque
-            voluptates iure aliquid?
+            <div className="modal-content-top">
+              <h1>{imageData?.user?.username}</h1>
+              <h2>{imageData?.user?.name}</h2>
+              <h3>{imageData?.user?.location}</h3>
+            </div>
+            <div className="modal-content-middle">
+              <p>{imageData?.user?.bio}</p>
+            </div>
+            <div className="modal-content-bottom">
+              <div className="total-likes total">
+                <h1>Total Likes</h1>
+                <span>{imageData?.user?.total_likes}</span>
+              </div>
+              <div className="total-collections total">
+                <h1>Total Collections</h1>
+                <span>{imageData?.user?.total_collections}</span>
+              </div>
+              <div className="total-photos total">
+                <h1>Total Photos</h1>
+                <span>{imageData?.user?.total_photos}</span>
+              </div>
+            </div>
           </div>
           <div className="modal-actions-container">
             <div className="modal-actions">
